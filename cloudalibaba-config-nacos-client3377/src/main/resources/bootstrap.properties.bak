@@ -1,0 +1,14 @@
+# nacos配置
+server.port=3377
+spring.application.name=nacos-config-client
+#Nacos服务注册中心地址
+spring.cloud.nacos.discovery.server-addr=192.168.236.129:8848
+#Nacos作为配置中心地址
+spring.cloud.inetutils.default-ip-address=192.168.236.129:8848
+#指定yaml格式的配置
+spring.cloud.nacos.config.file-extension=yaml
+spring.cloud.nacos.config.group=DEV_GROUP
+#spring.cloud.nacos.config.namespace=7d8f0f5a-6a53-4785-9686-dd460158e5d4
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
+# nacos-config-client-dev.yaml
+# nacos-config-client-test.yaml   ----> config.info
